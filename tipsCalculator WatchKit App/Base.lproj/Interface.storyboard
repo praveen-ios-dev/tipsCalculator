@@ -35,8 +35,12 @@
                                 </group>
                             </items>
                         </group>
+                        <label width="136" alignment="center" verticalAlignment="bottom" text="Please enter valid number" textAlignment="center" numberOfLines="0" id="Uy8-CS-rXC">
+                            <color key="textColor" red="1" green="0.18803949011768184" blue="0.088370619384601334" alpha="0.69803921568627447" colorSpace="custom" customColorSpace="displayP3"/>
+                        </label>
                     </items>
                     <connections>
+                        <outlet property="errorlabel" destination="Uy8-CS-rXC" id="lAP-2W-gAv"/>
                         <outlet property="tenPercentLabel" destination="T9Y-aU-CC1" id="LSo-ZQ-dn9"/>
                         <outlet property="textField" destination="oPu-IE-pCu" id="G1K-qK-xc5"/>
                         <outlet property="thirtyPercentLabel" destination="QDm-S0-SH9" id="UYy-1b-LWO"/>

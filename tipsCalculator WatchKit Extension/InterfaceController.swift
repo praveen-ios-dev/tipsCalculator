@@ -15,11 +15,19 @@ class InterfaceController: WKInterfaceController {
     @IBOutlet weak var tenPercentLabel: WKInterfaceLabel!
     @IBOutlet weak var twentyPercentLabel: WKInterfaceLabel!
     @IBOutlet weak var thirtyPercentLabel: WKInterfaceLabel!
+    @IBOutlet weak var errorlabel: WKInterfaceLabel!
     
     @IBAction func textfieldAction(_ value: NSString?) {
+        errorlabel.setHidden(true)
         let stringText = value as String?
         if let values = stringText{
-            guard let intValue = Int(values) else { return}
+            guard let intValue = Int(values) else {
+                tenPercentLabel.setText("")
+                twentyPercentLabel.setText("")
+                thirtyPercentLabel.setText("")
+                errorlabel.setHidden(false)
+                return
+            }
             tenPercentLabel.setText("\(intValue*10 / 100)")
             twentyPercentLabel.setText("\(intValue*15 / 100)")
             thirtyPercentLabel.setText("\(intValue*20 / 100)")
@@ -32,7 +40,7 @@ class InterfaceController: WKInterfaceController {
     }
     
     override func willActivate() {
-        // This method is called when watch view controller is about to be visible to user
+        errorlabel.setHidden(true)
     }
     
     override func didDeactivate() {
