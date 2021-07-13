@@ -1,14 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="14256" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="17156" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+    <device id="watch38"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14243"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="14219"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="17034"/>
     </dependencies>
     <scenes>
         <!--Interface Controller-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModuleProvider="target"/>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="tipsCalculator_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <label alignment="center" text="Tips Calculator" id="9v0-Vf-sxf"/>
+                        <textField width="1" alignment="left" placeholder="BILL AMOUNT" id="oPu-IE-pCu">
+                            <connections>
+                                <action selector="textfieldAction:" destination="AgC-eL-Hgc" id="Mxh-Ra-Xyt"/>
+                            </connections>
+                        </textField>
+                        <group width="1" alignment="left" id="9Hg-NW-6pX">
+                            <items>
+                                <group width="63" alignment="left" layout="vertical" id="gb8-pi-Y5M">
+                                    <items>
+                                        <label alignment="left" text="10%" id="hzK-Ue-hU4"/>
+                                        <label alignment="left" text="15%" id="uNi-Jg-Iq3"/>
+                                        <label alignment="left" text="20%" id="oYW-oT-gxG"/>
+                                    </items>
+                                </group>
+                                <group width="1" alignment="left" layout="vertical" id="EtX-Y8-6dx">
+                                    <items>
+                                        <label alignment="left" id="T9Y-aU-CC1"/>
+                                        <label alignment="left" id="ZhB-xR-7Bw"/>
+                                        <label alignment="left" id="QDm-S0-SH9"/>
+                                    </items>
+                                </group>
+                            </items>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="tenPercentLabel" destination="T9Y-aU-CC1" id="LSo-ZQ-dn9"/>
+                        <outlet property="textField" destination="oPu-IE-pCu" id="G1K-qK-xc5"/>
+                        <outlet property="thirtyPercentLabel" destination="QDm-S0-SH9" id="UYy-1b-LWO"/>
+                        <outlet property="twentyPercentLabel" destination="ZhB-xR-7Bw" id="iGL-Q0-VL1"/>
+                    </connections>
+                </controller>
             </objects>
             <point key="canvasLocation" x="220" y="345"/>
         </scene>
@@ -32,14 +66,14 @@
         <!--Notification Controller-->
         <scene sceneID="ZPc-GJ-vnh">
             <objects>
-                <controller id="4sK-HA-Art" customClass="NotificationController" customModuleProvider="target"/>
+                <controller id="4sK-HA-Art" customClass="NotificationController" customModule="tipsCalculator_WatchKit_App" customModuleProvider="target"/>
             </objects>
             <point key="canvasLocation" x="468" y="643"/>
         </scene>
         <!--Notification Controller-->
         <scene sceneID="Niz-AI-uX2">
             <objects>
-                <controller id="eXb-UN-Cd0" customClass="NotificationController" customModuleProvider="target"/>
+                <controller id="eXb-UN-Cd0" customClass="NotificationController" customModule="tipsCalculator_WatchKit_App" customModuleProvider="target"/>
             </objects>
             <point key="canvasLocation" x="468" y="345"/>
         </scene>
